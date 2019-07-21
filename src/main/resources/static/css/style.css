@@ -1,0 +1,140 @@
+body {
+  font-size: 16px; }
+
+.c-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0px auto; }
+
+.c-registerAccount__message {
+  width: 100%;
+  max-width: 310px;
+  margin: 0px auto;
+  min-height: 140px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: #00B1EB;
+  color: #fff;
+  margin-bottom: 10px;
+  margin-bottom: 39px;
+  border-radius: 0.2em;
+  -webkit-box-shadow: 0px 0px 1px 14px #000, 0px 0px 7px #000 inset, -22px 1px 3px #000 inset, 22px 1px 3px #000 inset;
+  box-shadow: 0px 0px 1px 14px #000, 0px 0px 7px #000 inset, -22px 1px 3px #000 inset, 22px 1px 3px #000 inset;
+  statictext-align: center;
+  font-size: 1.1rem;
+  padding: 1em;
+  text-align: center; }
+
+.c-registerAccount__title {
+  display: block;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  line-height: 70px; }
+
+.c-registerAccount__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.c-tabs__input {
+  margin-bottom: 15px;
+  width: 100%;
+  max-width: 250px; }
+
+select {
+  width: 100%;
+  height: 30px;
+  font-size: 1rem; }
+
+input[type="text"], input[type="number"] {
+  width: 100%; }
+
+.c-registerAccount-operation, .c-listadoc-registerAccount-operation, .c-listado {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 100px;
+  margin-top: 50px; }
+
+.o-button {
+  text-decoration: none;
+  line-height: 60px;
+  width: 145px;
+  background: #00B1EB;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0.5em;
+  color: #fff;
+  font-size: 1rem; }
+
+#cuentaDestino {
+  display: none; }
+
+.c-registerAccount-operation {
+  background-image: url(../img/cajero.png);
+  background-size: 406px;
+  background-repeat: no-repeat; }
+
+input {
+  border: 0.1em solid #333;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0.3em; }
+
+input[type="submit"] {
+  background: #00B1EB;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 0px;
+  color: #fff;
+  padding: 0.7em; }
+
+#table {
+  width: 100%;
+  max-width: 441px; }
+
+.t-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  border: 0.1em solid #333;
+  padding: 0.5em;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  margin-bottom: 5px; }
+
+.c-tabs__input span {
+  display: block;
+  text-align: center; }

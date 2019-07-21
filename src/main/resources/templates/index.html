@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Welcome to the Bank</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://cdn.jsdelivr.net/vue.resource/1.3.1/vue-resource.min.js"></script>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<body >
+<div class="c-panel">
+
+    <div class="c-container">
+        <div id="formAccount" class="c-registerAccount">
+            <span class="c-registerAccount__title">Prueba Registro de Cuenta Cliente</span>
+
+            <div class="c-registerAccount__message">{{ log }}</div>
+            <form id="addAccount"  v-on:submit="sub"  action="#" class="c-registerAccount__form"  method="POST">
+                <div class="c-tabs__input">
+                    <span>No Cuenta.</span>
+                    <input type="number" v-model="numberAccount" min="10"  name="numberAccount" placeholder="Account"  />
+                </div>
+                <div class="c-tabs__input">
+                    <span>Tipo de Cuenta.</span>
+                    <select v-model="typeAccount" name="typeAccount">
+                        <option value="001">Nomina</option>
+                        <option value="002">Debito</option>
+                        <option value="003">Credito</option>
+                    </select>
+                </div>
+                <div class="c-tabs__input">
+                    <span>Saldo Inicial</span>
+                    <input type="number" v-model="amount" placeholder="Amount"  />
+                </div>
+
+                <h3>Datos Personales</h3>
+
+                <div class="c-tabs__input">
+                    <span>First Name</span>
+                    <input type="text" v-model="firstName"  placeholder="firstName"  />
+                </div>
+
+                <div class="c-tabs__input">
+                    <span>Last Name</span>
+                    <input type="text"  v-model="lastName"  placeholder="LastName"  />
+                </div>
+
+                <div class="c-tabs__input">
+                    <span>Curp</span>
+                    <input type="text"  v-model="greenCard"  placeholder="Curp"  />
+                </div>
+
+                <div class="c-tabs__input">
+                    <label for="male">Male</label>
+                    <input type="radio" v-model="gender" id="male" value="M" >
+
+                    <label for="female">Female</label>
+                    <input type="radio" v-model="gender" id="female" value="F" >
+                </div>
+
+                <input type="submit" value="new Account" />
+            </form>
+        </div>
+
+        <div id="operationAccount" class="c-registerAccount-operation">
+
+            <span class="c-registerAccount__title">Operacion Cuenta - Cliente</span>
+
+            <div class="c-registerAccount__message">{{ log }}</div>
+
+            <div class="c-tabs__input">
+                <p>No Cuenta</p>
+                <input v-model="account" type="number" min="10" placeholder="Cuenta" />
+            </div>
+
+            <div  class="c-tabs__input">
+                <p>Tipo de Operacion</p>
+                <select v-model="typeOperation" v-on:change="changeItem">
+                    <option value="">Selecciones Una opcion</option>
+                    <option value="0001">Retiro</option>
+                    <option value="0002">Transferencia</option>
+                    <option value="0003">Deposito</option>
+                </select>
+            </div>
+
+
+            <div id="cuentaDestino" class="c-tabs__input">
+                <p>Cuenta Destino</p>
+                <input v-model="provAccount" min="10" type="number" placeholder="Cuenta Destino" />
+            </div>
+
+            <div class="c-tabs__input">
+                <p>Monto</p>
+                <input  v-model="amount" type="number" placeholder="Monto de Envio" />
+            </div>
+
+
+            <div class="c-tabs__input">
+                <a class="o-button" v-on:click="createOperation" href="#">Realizar Operaci&oacute;n</a>
+            </div>
+        </div>
+
+
+        <div id="listOperations" class="c-listado">
+
+            <span class="c-registerAccount__title">Operaciones Realizadas</span>
+
+
+            <div class="c-registerAccount__message">{{ log }}</div>
+
+            <div class="c-tabs__input">
+                <span>No Cuenta.</span>
+                <input type="number" min="10"  name="numberAccount" v-model="account" placeholder="Account"  />
+            </div>
+
+            <div class="c-tabs__input">
+                <a class="o-button" v-on:click="consulta" href="#">Consultar</a>
+            </div>
+
+
+            <div id="table"></div>
+
+        </div>
+    </div>
+
+</div>
+
+</body>
+<script th:src="@{/js/account.js}"></script>
+<script th:src="@{/js/operationAccount.js}"></script>}
+<script th:src="@{/js/consultAccount.js}"></script>
+
+</html>
